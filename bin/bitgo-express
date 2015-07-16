@@ -68,11 +68,13 @@ var getArgs = function () {
 
 args = getArgs();
 
+/*
 if (args.env === 'prod') {
   if (!args.keypath || !args.crtpath) {
     throw new Error("Must provide keypath and crtpath for SSL in prod!");
   }
 }
+*/
 
 if ((!!args.keypath !== !!args.crtpath)) {
   throw new Error("Must provide both keypath and crtpath!");
